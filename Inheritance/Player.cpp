@@ -33,7 +33,7 @@ void Player::display(){
     cout<<"Name:"<<playername<<endl;
 }
 Batsman::Batsman(){
-    innings=notout=runs=0;
+    innings=notout=runs=1;
 }
 Batsman::Batsman(int pid,char name[],int innings,int notout,int runs):Player(pid,name){
     this->innings=innings;
@@ -42,10 +42,10 @@ Batsman::Batsman(int pid,char name[],int innings,int notout,int runs):Player(pid
 }
 
 int Batsman::calcAvg(int i,int n,int r){
-    if(! i==0 && n==0 && r==0){
+    
          return r/(i-n);
-    }
-    return -1;
+    
+    
    
 }
 void Batsman::displayData(){
